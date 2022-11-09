@@ -39,8 +39,9 @@ userController.post("/login", async(req,res)=>{
             res.send("Something went wrong, plz try again later")
         }
         if(result){
-           const token = jwt.sign()     
-        }else{
+        const token = jwt.sign({foo:'bar'},'shhhhh'); 
+
+       }else{
             res.send("Invalid credentials,please singup if you haven't")
         }
     });
