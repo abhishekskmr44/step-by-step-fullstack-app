@@ -5,11 +5,11 @@ require("dotenv").config()
 
 const {UserModel} = require("../models/User.model")
 
-const userController = Router();
+const notesController = Router();
 
 
 
 
 module.exports = {
-    userController
+    notesController
 }

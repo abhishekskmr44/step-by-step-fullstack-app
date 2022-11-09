@@ -1,17 +1,18 @@
 backend/routes.notes.routes.jsonwebtoken
 
-const {Router} = require("express");
+conconst {Router} = require("express");
 const bcrypt = require("bcrypt")
 const jwt = require("jsonwebtoken")
 require("dotenv").config()
 
 const {UserModel} = require("../models/User.model")
 
-const userController = Router();
+const notesController = Router();
 
 
 
 
 module.exports = {
-    userController
+    notesController
+}
 }
