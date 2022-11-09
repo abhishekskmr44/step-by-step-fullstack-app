@@ -1,4 +1,4 @@
-backend/rotes/user.routes.js
+backend/routes/user.routes.js
 
 const {Router} = require("express");
 
