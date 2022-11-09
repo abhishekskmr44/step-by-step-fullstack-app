@@ -9,7 +9,7 @@ const userController = Router();
 
 userController.post("/signup",(req,res)=>{
    const {email,password,age} = req.body;
-   bcrypt.hash(password, 6, function(err, hash) {
+   bcrypt.hash(password, 6, async function(err, hash) {
     // Store hash in your password DB.
     if(err){
         res.send("Something went wrong, plz try again later")
@@ -21,7 +21,7 @@ userController.post("/signup",(req,res)=>{
 
     })
     await user.save()
-    res.send("Signup")
+    res.send("Signup successfull")
     
    });
 })
