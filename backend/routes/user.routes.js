@@ -8,7 +8,6 @@ require("dotenv").config()
 
 const {UserModel} = require("../models/User.model")
 
-
 const userController = Router();
 
 userController.post("/signup",(req,res)=>{
