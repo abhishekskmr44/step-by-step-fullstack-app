@@ -6,6 +6,8 @@ const {notesController} = require("./routes/notes.routes")
 
 const {connection} = require("./config/db")
 
+const {authentication} = require("./middlewares/authentication")
+
 const app = express();
 
 const PORT  = 8881
@@ -17,6 +19,8 @@ app.get("/",(req,res)=>{
 })
 
 app.use("/user",userController)
+
+app.use(authentication)
 
 app.use("/notes", notesController)
 
