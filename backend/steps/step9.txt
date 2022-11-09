@@ -1,4 +1,4 @@
-backend/models/USer.model.js
+backend/models/User.model.js
 
 const mongoose = require("mongoose")
 
