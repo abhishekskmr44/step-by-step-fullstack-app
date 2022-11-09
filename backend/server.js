@@ -18,6 +18,14 @@ app.use("/user",userController)
 
 // app.use("/notes", notesController)
 
-app.listen(PORT,()=>{
+app.listen(PORT,async()=>{
+    try{
+        await connection;
+        console.log("Connected to db")
+    }
+    catch(err){
+        console.log("Error connecting to DB")
+        console.log(err)
+    }
    console.log(`listening on PORT ${PORT}`)
 })
