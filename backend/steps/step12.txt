@@ -17,15 +17,15 @@ userController.post("/signup",(req,res)=>{
     const user = new UserModel.create({
         email,
         password:hash,
-        age,
+        age
 
     })
-    res.send("Signup")
     await user.save()
+    res.send("Signup")
+    
    });
- 
-   
 })
+
 
 userController.post("/login",(req,res)=>{
     res.send("login")
