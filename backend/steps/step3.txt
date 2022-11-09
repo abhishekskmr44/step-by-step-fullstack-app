@@ -1,0 +1,18 @@
+backend/rotes/user.routes.js
+
+const {Router} = require("express");
+
+const userController = require("./routes/user.routes")
+const userController = Router();
+
+userController.post("/signup",(req,res)=>{
+    res.send("Signup")
+})
+
+userController.post("/login",(req,res)=>{
+    res.send("login")
+})
+
+module.exports = {
+    userController
+}
