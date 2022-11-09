@@ -1,6 +1,5 @@
 const {Router} = require("express");
 
-const userController = require("./routes/user.routes")
 const userController = Router();
 
 userController.post("/signup",(req,res)=>{
