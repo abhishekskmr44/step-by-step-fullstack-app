@@ -3,11 +3,13 @@ const bcrypt = require("bcrypt")
 const jwt = require("jsonwebtoken")
 require("dotenv").config()
 
-const {UserModel} = require("../models/User.model")
+const {NoteModel} = require("../models/Notes.model")
 
 const notesController = Router();
 
-
+notesController.get("/",(req,res)=>{
+    res.send("notes")
+})
 
 
 module.exports = {
